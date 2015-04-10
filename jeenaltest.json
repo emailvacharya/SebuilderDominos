@@ -1,0 +1,40 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://www.dominos.co.uk/"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "txtPostcode"
+      },
+      "text": "MK6 4BB"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "btnStoreSearch"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "MK2 2QG - MILTON KEYNES - BLETCHLEY"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "MK2 2QG - MILTON KEYNES - BLETCHLEY"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
